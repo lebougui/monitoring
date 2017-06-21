@@ -1,10 +1,10 @@
-#Compilation
+# Compilation
 
 ```
 gcc monit.c  -o monit -O2 -Wall -W -Werror  -pedantic
 ```
 
-#Tests
+# Tests
 
 ``` 
 ./monit -m /proc/
