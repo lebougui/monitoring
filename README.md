@@ -1,13 +1,13 @@
 #Compilation
 
 ```
-gcc inotify.c  -o inot
+gcc monit.c  -o monit -O2 -Wall -W -Werror  -pedantic
 ```
 
 #Tests
 
 ``` 
-./inot -m /proc/
+./monit -m /proc/
 /proc/ stats :
 type of filesystem = 0x9fa0 (PROC_SUPER_MAGIC),
 optimal transfer block size = 0x1000
