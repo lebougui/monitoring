@@ -188,15 +188,15 @@ int main(int argc, char *argv[])
                         "total file nodes in file system = 0x%ld\n "
                         "free file nodes in fs = 0x%ld\n "
                         "maximum length of filenames = 0x%ld\n", monitoringPath, \
-                                                                                                                   buf.f_type, \
-                                                                                                                   fs->name, \
-                                                                                                                   buf.f_bsize, \
-                                                                                                                   buf.f_blocks, \
-                                                                                                                   buf.f_bfree, \
-                                                                                                                   buf.f_bavail, \
-                                                                                                                   buf.f_files, \
-                                                                                                                   buf.f_ffree, 
-                                                                                                                   buf.f_namelen  );
+                                                                 buf.f_type,     \
+                                                                 fs->name,       \
+                                                                 buf.f_bsize,    \
+                                                                 buf.f_blocks,   \
+                                                                 buf.f_bfree,    \
+                                                                 buf.f_bavail,   \
+                                                                 buf.f_files,    \
+                                                                 buf.f_ffree,    \
+                                                                 buf.f_namelen );
                 break;   
             }
         }
@@ -241,12 +241,12 @@ int main(int argc, char *argv[])
         event = (struct inotify_event *) buffer;
         ltime = time(NULL);
         Tm = localtime(&ltime);
-        printf("[%s access monitoring]\tDate=%04d-%02d-%02d %02d:%02d:%02d\t", monitoringPath, \
+        printf("[%s access monitoring]\tDate=%04d-%02d-%02d %02d:%02d:%02d\t", monitoringPath,      \
                                                                               (Tm->tm_year + 1900), \
-                                                                              (Tm->tm_mon+1), \
-                                                                              Tm->tm_mday, \
-                                                                              Tm->tm_hour, \
-                                                                              Tm->tm_min, \
+                                                                              (Tm->tm_mon+1),       \
+                                                                              Tm->tm_mday,          \
+                                                                              Tm->tm_hour,          \
+                                                                              Tm->tm_min,           \
                                                                               Tm->tm_sec);
  
         if (event->len) 
